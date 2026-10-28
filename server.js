@@ -4,7 +4,7 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const MAX_LEN = 2000;      // batas panjang catatan
+const MAX_LEN = 4444;      // batas panjang catatan
 const MAX_NOTES = 500;     // batas catatan yang disimpan bersamaan
 const TTL = { '1h': 3600e3, '24h': 86400e3 };
 const ID_RE = /^[a-f0-9]{32}$/;
@@ -13,7 +13,7 @@ const ID_RE = /^[a-f0-9]{32}$/;
 const notes = new Map();
 
 app.disable('x-powered-by');
-app.use(express.json({ limit: '8kb' }));
+app.use(express.json({ limit: '24kb' }));
 app.use((req, res, next) => {
   res.set({
     'Cache-Control': 'no-store',
