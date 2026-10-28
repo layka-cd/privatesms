@@ -30,7 +30,7 @@ privatesms/
 
 ## Batasan
 
-- Maksimal 2.000 karakter per catatan
+- Maksimal 4.444 karakter per catatan
 - Maksimal 500 catatan tersimpan bersamaan
 - Catatan disimpan di memori server, bukan database. Catatan yang belum dibuka akan hilang jika server restart, deploy ulang, atau tertidur
 - Belum ada pembatasan jumlah pembuatan catatan per IP
